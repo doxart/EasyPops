@@ -50,7 +50,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void getDatePicker() {
         DatePickerStyle datePickerStyle = new DatePickerStyle();
-        datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, com.doxart.easypops.R.color.blat));
+        datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+        datePickerStyle.setTitleColor(ContextCompat.getColor(this, R.color.white));
+        datePickerStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+        datePickerStyle.setPositiveButtonColor(ContextCompat.getColor(this, R.color.primary));
+        datePickerStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.white));
+
+        EasyPopup.createDatePicker(this).setBackgroundColor(ContextCompat.getColor(this, R.color.white)).buildAndShow();
 
         EasyPopup.createDatePicker(this).setTitle("Date picker").setMessage("Select your date").setDatePickerStyle(datePickerStyle).setOnDateSelectListener(new OnDateSelectListener() {
             @Override
@@ -66,14 +72,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getProgress() {
+        EasyPopup.createProgress(this).setProgressColor(ContextCompat.getColor(this, R.color.primary)).setAutoCancel(10000).buildAndShow();
+
         EasyPopup.createProgress(this).buildAndShow();
     }
 
     private void getSnack() {
+        SnackStyle snackStyle = new SnackStyle();
+        snackStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+        snackStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+        snackStyle.setButtonColor(ContextCompat.getColor(this, R.color.primary));
+        snackStyle.setPosition(SnackStyle.Position.BOTTOM);
+
+        EasyPopup.createSnack(this).setBackgroundColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
+
         EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is error snack.").buildAndShow();
     }
 
     private void getDialog() {
+        DialogStyle dialogStyle = new DialogStyle();
+        dialogStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+        dialogStyle.setTitleColor(ContextCompat.getColor(this, R.color.white));
+        dialogStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+        dialogStyle.setPositiveButtonColor(ContextCompat.getColor(this, R.color.primary));
+        dialogStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.white));
+        dialogStyle.setNegativeButtonColor(ContextCompat.getColor(this, R.color.primary));
+        dialogStyle.setNegativeButtonTextColor(ContextCompat.getColor(this, R.color.white));
+
+        EasyPopup.createDialog(this).setTitleColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
+
         EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.DIALOG_NORMAL()).buildAndShow();
     }
 }
