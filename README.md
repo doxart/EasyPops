@@ -31,16 +31,13 @@ dependencies {
 Simple Popup Example
 
 ```
-EasyPops.showToast(context, "Hello, EasyPops!");
+EasyPopup.createProgress(this).buildAndShow();
 ```
 
+Snack Example
+
 ```
-EasyPops.create(context)
-    .setMessage("This is a custom popup!")
-    .setTextColor(Color.WHITE)
-    .setBackgroundColor(Color.parseColor("#6200EE"))
-    .setDuration(EasyPops.LENGTH_LONG)
-    .show();
+EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is error snack.").buildAndShow();
 ```
 
 ## 🛠️ Configuration
