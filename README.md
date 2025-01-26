@@ -8,7 +8,7 @@ EasyPops is a lightweight and easy-to-use Android library for creating customiza
 
 - Simple and intuitive API.
 - Fully customizable popups (colors, text, animations, etc.).
-- Supports multiple popup styles like toast, snackbars, and alerts.
+- Supports multiple popup styles like progress, snackbars, date pickers and dialogs.
 - Lightweight and optimized for performance.
 - Compatible with Android API level 24 and above.
 - Built-in support for material design principles.
