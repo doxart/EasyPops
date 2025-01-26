@@ -67,7 +67,7 @@ EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").set
 ## 🛠️ Customizing
 You can set default styles and configurations for all popups in your Application class:
 
-### Customizing Date Picker
+### Date Picker
 
 ```java
 DatePickerStyle datePickerStyle = new DatePickerStyle();
@@ -84,15 +84,20 @@ or use direct styling
 EasyPopup.createDatePicker(this).setBackgroundColor(ContextCompat.getColor(this, R.color.white)).buildAndShow();
 ```
 
-### Customizing Snack
+### Snack
 
 ```java
-DatePickerStyle datePickerStyle = new DatePickerStyle();
-datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
-datePickerStyle.setTitleColor(ContextCompat.getColor(this, R.color.white));
-datePickerStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
-datePickerStyle.setPositiveButtonColor(ContextCompat.getColor(this, R.color.primary));
-datePickerStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.white));
+SnackStyle snackStyle = new SnackStyle();
+snackStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+snackStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+snackStyle.setButtonColor(ContextCompat.getColor(this, R.color.primary));
+snackStyle.setPosition(SnackStyle.Position.BOTTOM);
+```
+
+or use direct styling
+
+```java
+EasyPopup.createSnack(this).setBackgroundColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
 ```
 
 ## 📦 Dependencies
