@@ -130,7 +130,7 @@ Material Components
 Ensures a modern look and feel that aligns with Android's material design principles.
 
 ```groovy
-implementation "com.google.android.material:material:1.9.0"
+implementation "com.google.android.material:material:1.12.0"
 ```
 
 ## 📝 License
