@@ -40,7 +40,7 @@ Snack Example
 EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is error snack.").buildAndShow();
 ```
 
-Date Picker Example
+### Date Picker
 
 ```java
 DatePickerStyle datePickerStyle = new DatePickerStyle();
@@ -56,6 +56,23 @@ EasyPopup.createDatePicker(this).setTitle("Date picker").setMessage("Select your
      public void onDismiss() {
      }
 }).buildAndShow();
+```
+
+#### Customizing
+
+```java
+DatePickerStyle datePickerStyle = new DatePickerStyle();
+datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+datePickerStyle.setTitleColor(ContextCompat.getColor(this, R.color.white));
+datePickerStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+datePickerStyle.setPositiveButtonColor(ContextCompat.getColor(this, R.color.primary));
+datePickerStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.white));
+```
+
+or use direct styling
+
+```java
+EasyPopup.createDatePicker(this).setBackgroundColor(ContextCompat.getColor(this, R.color.white)).buildAndShow();
 ```
 
 Dialog Example
