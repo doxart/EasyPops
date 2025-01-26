@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:padding="35dp"
+    android:clipToPadding="false"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        android:id="@+id/askBG"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/blat">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:clipToPadding="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:maxWidth="320dp"
+                android:id="@+id/askTitle"
+                android:textSize="16dp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:gravity="center"
+                android:maxWidth="320dp"
+                android:textColor="@color/plat2"
+                android:id="@+id/askContain"
+                android:textSize="14dp"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:iconPadding="10dp"
+                android:id="@+id/askPositive"
+                android:layout_marginTop="10dp"
+                android:maxWidth="320dp"
+                android:textAllCaps="false"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="@color/secondary"
+                app:cornerRadius="9dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:text="Yes"
+                android:textColor="@color/white"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:iconPadding="10dp"
+                android:id="@+id/askNegative"
+                android:layout_marginHorizontal="10dp"
+                android:maxWidth="320dp"
+                android:backgroundTint="@android:color/transparent"
+                app:cornerRadius="9dp"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:text="No"
+                android:textColor="@color/plat2"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:iconPadding="10dp"
+                android:id="@+id/askOther"
+                android:layout_marginHorizontal="10dp"
+                android:maxWidth="320dp"
+                android:textSize="14dp"
+                android:backgroundTint="@android:color/transparent"
+                app:cornerRadius="9dp"
+                android:gravity="center"
+                android:visibility="gone"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:text="Later"
+                android:textColor="@color/plat3"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

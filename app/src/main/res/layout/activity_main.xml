@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/baseline_arrow_forward_ios_24"
+        app:endIconScaleType="center"
+        app:endIconTint="@color/input_stroke_color"
+        app:startIconDrawable="@drawable/baseline_calendar_month_24"
+        app:startIconTint="@color/input_stroke_color"
+        app:boxStrokeWidth="2dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxStrokeColor="@color/input_stroke_color"
+        app:boxCornerRadiusTopStart="14dp"
+        app:boxCornerRadiusTopEnd="14dp"
+        app:boxCornerRadiusBottomStart="14dp"
+        app:boxCornerRadiusBottomEnd="14dp"
+        app:hintEnabled="false"
+        android:focusable="false"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/plat">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/datePickerBt"
+            android:hint="Select Date"
+            android:focusable="false"
+            android:textColorHint="@color/plat2"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:cornerRadius="14dp"
+        app:icon="@drawable/baseline_incomplete_circle_24"
+        android:layout_margin="20dp"
+        android:text="Show Progress"
+        android:id="@+id/showProgressBt"
+        app:backgroundTint="@color/black"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:cornerRadius="14dp"
+        app:icon="@drawable/baseline_info_24"
+        android:layout_margin="20dp"
+        android:text="Show Snack"
+        android:id="@+id/showSnackBt"
+        app:backgroundTint="@color/black"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:cornerRadius="14dp"
+        app:icon="@drawable/baseline_question_answer_24"
+        android:layout_margin="20dp"
+        android:text="Show Dialog"
+        android:id="@+id/showDialogBt"
+        app:backgroundTint="@color/black"/>
+
+</LinearLayout>

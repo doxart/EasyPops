@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        android:id="@+id/card"
+        app:cardBackgroundColor="@color/blat">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:clipToPadding="false"
+            android:gravity="center|top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select a date"
+                android:id="@+id/title"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select a date to get started"
+                android:id="@+id/message"
+                android:textSize="12dp"
+                android:textColor="@color/plat2"
+                android:gravity="center"
+                android:layout_marginTop="5dp"/>
+
+            <DatePicker
+                android:theme="@style/CustomDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:id="@+id/datePicker"
+                android:backgroundTint="@color/secondary"
+                android:datePickerMode="spinner"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cornerRadius="14dp"
+                android:textColor="@color/primary"
+                android:id="@+id/applyBt"
+                app:backgroundTint="@color/white"
+                android:theme="@style/Base.Theme.EasyPops"
+                android:text="Select"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="14dp"
+                android:textColor="@color/plat2"
+                android:layout_marginTop="5dp"
+                android:id="@+id/laterBt"
+                android:theme="@style/Base.Theme.EasyPops"
+                app:backgroundTint="@android:color/transparent"
+                android:text="Cancel"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
