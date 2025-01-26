@@ -21,7 +21,7 @@ EasyPops is a lightweight and easy-to-use Android library for creating customiza
 
 Add the dependency to your module-level build.gradle:
 
-```
+```groovy
 dependencies {
     implementation "com.github.doxart:easypops:1.0.0"
 }
@@ -30,19 +30,19 @@ dependencies {
 ## 📖 Usage
 Simple Popup Example
 
-```
+```java
 EasyPopup.createProgress(this).buildAndShow();
 ```
 
 Snack Example
 
-```
+```java
 EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is error snack.").buildAndShow();
 ```
 
 Date Picker Example
 
-```
+```java
 DatePickerStyle datePickerStyle = new DatePickerStyle();
 datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, com.doxart.easypops.R.color.blat));
 
@@ -72,7 +72,7 @@ EasyPops.setDefaultDuration(EasyPops.LENGTH_SHORT);
 Material Components
 Ensures a modern look and feel that aligns with Android's material design principles.
 
-```
+```groovy
 implementation "com.google.android.material:material:1.9.0"
 ```
 
