@@ -40,6 +40,24 @@ Snack Example
 EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is error snack.").buildAndShow();
 ```
 
+Date Picker Example
+
+```
+DatePickerStyle datePickerStyle = new DatePickerStyle();
+datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, com.doxart.easypops.R.color.blat));
+
+EasyPopup.createDatePicker(this).setTitle("Date picker").setMessage("Select your date").setDatePickerStyle(datePickerStyle).setOnDateSelectListener(new OnDateSelectListener() {
+     @Override
+     public void onDateSelected(int day, int month, int year) {
+          String date = day + "/" + month + "/" + year;
+     }
+
+     @Override
+     public void onDismiss() {
+     }
+     }).buildAndShow();
+```
+
 ## 🛠️ Configuration
 Customizing Global Defaults
 You can set default styles and configurations for all popups in your Application class:
