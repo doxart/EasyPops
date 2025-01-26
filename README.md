@@ -28,7 +28,8 @@ dependencies {
 ```
 
 ## 📖 Usage
-Simple Popup Example
+
+### Progress
 
 ```java
 EasyPopup.createProgress(this).buildAndShow();
