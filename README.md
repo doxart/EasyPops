@@ -44,7 +44,7 @@ Date Picker Example
 
 ```java
 DatePickerStyle datePickerStyle = new DatePickerStyle();
-datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, com.doxart.easypops.R.color.blat));
+datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
 
 EasyPopup.createDatePicker(this).setTitle("Date picker").setMessage("Select your date").setDatePickerStyle(datePickerStyle).setOnDateSelectListener(new OnDateSelectListener() {
      @Override
@@ -55,7 +55,13 @@ EasyPopup.createDatePicker(this).setTitle("Date picker").setMessage("Select your
      @Override
      public void onDismiss() {
      }
-     }).buildAndShow();
+}).buildAndShow();
+```
+
+Dialog Example
+
+```java
+EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.DIALOG_NORMAL()).buildAndShow();
 ```
 
 ## 🛠️ Configuration
