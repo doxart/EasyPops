@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    `maven-publish`
 }
 
 android {
@@ -26,17 +27,27 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
-dependencies {
+configure<PublishingExtension> {
+    publications.create<MavenPublication>("EasyPops") {
+        groupId = "com.github.doxart"
+        artifactId = "EasyPops"
+        version = "1.0.0"
+    }
+    repositories {
+        mavenLocal()
+    }
+}
 
+dependencies {
     implementation(libs.material)
     implementation(libs.appcompat)
-    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
