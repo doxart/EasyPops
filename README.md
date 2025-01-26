@@ -32,19 +32,26 @@ dependencies {
 ### Progress
 
 ```java
-EasyPopup.createProgress(this).buildAndShow();
+EasyPopup.createProgress(this)
+     .buildAndShow();
 ```
 
 #### Customizing
 
 ```java
-EasyPopup.createProgress(this).setProgressColor(ContextCompat.getColor(this, R.color.primary)).setAutoCancel(10000).buildAndShow();
+EasyPopup.createProgress(this)
+     .setProgressColor(ContextCompat.getColor(this, R.color.primary))
+     .setAutoCancel(10000)
+     .buildAndShow();
 ```
 
 ### Snack
 
 ```java
-EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is error snack.").buildAndShow();
+EasyPopup.createSnack(this)
+     .setSnackStyle(SnackStyle.SNACK_ERROR(this))
+     .setMessage("This is error snack.")
+     .buildAndShow();
 ```
 
 #### Customizing
@@ -60,7 +67,9 @@ snackStyle.setPosition(SnackStyle.Position.BOTTOM);
 or use direct styling
 
 ```java
-EasyPopup.createSnack(this).setBackgroundColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
+EasyPopup.createSnack(this)
+     .setBackgroundColor(ContextCompat.getColor(this, R.color.primary))
+     .buildAndShow();
 ```
 
 ### Date Picker
@@ -69,7 +78,11 @@ EasyPopup.createSnack(this).setBackgroundColor(ContextCompat.getColor(this, R.co
 DatePickerStyle datePickerStyle = new DatePickerStyle();
 datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
 
-EasyPopup.createDatePicker(this).setTitle("Date picker").setMessage("Select your date").setDatePickerStyle(datePickerStyle).setOnDateSelectListener(new OnDateSelectListener() {
+EasyPopup.createDatePicker(this)
+     .setTitle("Date picker")
+     .setMessage("Select your date")
+     .setDatePickerStyle(datePickerStyle)
+     .setOnDateSelectListener(new OnDateSelectListener() {
      @Override
      public void onDateSelected(int day, int month, int year) {
           String date = day + "/" + month + "/" + year;
@@ -95,13 +108,19 @@ datePickerStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.
 or use direct styling
 
 ```java
-EasyPopup.createDatePicker(this).setBackgroundColor(ContextCompat.getColor(this, R.color.white)).buildAndShow();
+EasyPopup.createDatePicker(this)
+     .setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+     .buildAndShow();
 ```
 
 ### Dialog
 
 ```java
-EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.DIALOG_NORMAL()).buildAndShow();
+EasyPopup.createDialog(this)
+     .setTitle("Title")
+     .setMessage("This is message")
+     .setDialogStyle(DialogStyle.DIALOG_NORMAL())
+     .buildAndShow();
 ```
 
 #### Customizing
@@ -120,7 +139,9 @@ dialogStyle.setNegativeButtonTextColor(ContextCompat.getColor(this, R.color.whit
 or use direct styling
 
 ```java
-EasyPopup.createDialog(this).setTitleColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
+EasyPopup.createDialog(this)
+     .setTitleColor(ContextCompat.getColor(this, R.color.primary))
+     .buildAndShow();
 ```
 
 #### Customizing
