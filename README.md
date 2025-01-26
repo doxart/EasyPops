@@ -68,10 +68,13 @@ EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").set
 Customizing Global Defaults
 You can set default styles and configurations for all popups in your Application class:
 
-```
-EasyPops.setDefaultBackgroundColor(Color.BLACK);
-EasyPops.setDefaultTextColor(Color.WHITE);
-EasyPops.setDefaultDuration(EasyPops.LENGTH_SHORT);
+```java
+DatePickerStyle datePickerStyle = new DatePickerStyle();
+datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+datePickerStyle.setTitleColor(ContextCompat.getColor(this, R.color.white));
+datePickerStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+datePickerStyle.setPositiveButtonColor(ContextCompat.getColor(this, R.color.primary));
+datePickerStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.white));
 ```
 
 ## 📦 Dependencies
