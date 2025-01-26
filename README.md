@@ -34,6 +34,12 @@ Simple Popup Example
 EasyPopup.createProgress(this).buildAndShow();
 ```
 
+#### Customizing
+
+```java
+EasyPopup.createProgress(this).setProgressColor(ContextCompat.getColor(this, R.color.primary)).setAutoCancel(10000).buildAndShow();
+```
+
 ### Snack
 
 ```java
@@ -91,11 +97,32 @@ or use direct styling
 EasyPopup.createDatePicker(this).setBackgroundColor(ContextCompat.getColor(this, R.color.white)).buildAndShow();
 ```
 
-Dialog Example
+### Dialog
 
 ```java
 EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.DIALOG_NORMAL()).buildAndShow();
 ```
+
+#### Customizing
+
+```java
+DialogStyle dialogStyle = new DialogStyle();
+dialogStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+dialogStyle.setTitleColor(ContextCompat.getColor(this, R.color.white));
+dialogStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+dialogStyle.setPositiveButtonColor(ContextCompat.getColor(this, R.color.primary));
+dialogStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.white));
+dialogStyle.setNegativeButtonColor(ContextCompat.getColor(this, R.color.primary));
+dialogStyle.setNegativeButtonTextColor(ContextCompat.getColor(this, R.color.white));
+```
+
+or use direct styling
+
+```java
+EasyPopup.createDialog(this).setTitleColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
+```
+
+#### Customizing
 
 ## 📦 Dependencies
 Material Components
