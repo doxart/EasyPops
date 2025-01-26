@@ -34,10 +34,26 @@ Simple Popup Example
 EasyPopup.createProgress(this).buildAndShow();
 ```
 
-Snack Example
+### Snack
 
 ```java
 EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is error snack.").buildAndShow();
+```
+
+#### Customizing
+
+```java
+SnackStyle snackStyle = new SnackStyle();
+snackStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+snackStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+snackStyle.setButtonColor(ContextCompat.getColor(this, R.color.primary));
+snackStyle.setPosition(SnackStyle.Position.BOTTOM);
+```
+
+or use direct styling
+
+```java
+EasyPopup.createSnack(this).setBackgroundColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
 ```
 
 ### Date Picker
@@ -79,42 +95,6 @@ Dialog Example
 
 ```java
 EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.DIALOG_NORMAL()).buildAndShow();
-```
-
-## 🛠️ Customizing
-You can set default styles and configurations for all popups in your Application class:
-
-### Date Picker
-
-```java
-DatePickerStyle datePickerStyle = new DatePickerStyle();
-datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
-datePickerStyle.setTitleColor(ContextCompat.getColor(this, R.color.white));
-datePickerStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
-datePickerStyle.setPositiveButtonColor(ContextCompat.getColor(this, R.color.primary));
-datePickerStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.white));
-```
-
-or use direct styling
-
-```java
-EasyPopup.createDatePicker(this).setBackgroundColor(ContextCompat.getColor(this, R.color.white)).buildAndShow();
-```
-
-### Snack
-
-```java
-SnackStyle snackStyle = new SnackStyle();
-snackStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
-snackStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
-snackStyle.setButtonColor(ContextCompat.getColor(this, R.color.primary));
-snackStyle.setPosition(SnackStyle.Position.BOTTOM);
-```
-
-or use direct styling
-
-```java
-EasyPopup.createSnack(this).setBackgroundColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
 ```
 
 ## 📦 Dependencies
