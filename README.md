@@ -67,7 +67,7 @@ EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").set
 ## 🛠️ Customizing
 You can set default styles and configurations for all popups in your Application class:
 
-# Customizing Date Picker
+### Customizing Date Picker
 
 ```java
 DatePickerStyle datePickerStyle = new DatePickerStyle();
@@ -84,7 +84,7 @@ or use direct styling
 EasyPopup.createDatePicker(this).setBackgroundColor(ContextCompat.getColor(this, R.color.white)).buildAndShow();
 ```
 
-# Customizing Snack
+### Customizing Snack
 
 ```java
 DatePickerStyle datePickerStyle = new DatePickerStyle();
