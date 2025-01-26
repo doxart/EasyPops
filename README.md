@@ -8,7 +8,7 @@ EasyPops is a lightweight and easy-to-use Android library for creating customiza
 
 - Simple and intuitive API.
 - Fully customizable popups (colors, text, animations, etc.).
-- Supports multiple popup styles like toast, snackbars, and alerts.
+- Supports multiple popup styles like progress, snackbars, date pickers and dialogs.
 - Lightweight and optimized for performance.
 - Compatible with Android API level 24 and above.
 - Built-in support for material design principles.
@@ -19,73 +19,125 @@ EasyPops is a lightweight and easy-to-use Android library for creating customiza
 
 ### Step 1: Add the Dependency
 
-Add the following to your **build.gradle (project)** file to include the GitHub Packages repository:
-```groovy
-allprojects {
-    repositories {
-        maven {
-            url "https://maven.pkg.github.com/your-username/EasyPops"
-            credentials {
-                username = "GITHUB_USERNAME"
-                password = "GITHUB_TOKEN"
-            }
-        }
-    }
-}
-Then, add the dependency to your module-level build.gradle:
+Add the dependency to your module-level build.gradle:
 
-groovy
-Copy
-Edit
+```groovy
 dependencies {
     implementation "com.github.doxart:easypops:1.0.0"
 }
-📖 Usage
-Simple Popup Example
-java
-Copy
-Edit
-EasyPops.showToast(context, "Hello, EasyPops!");
-Customizing Popup Appearance
-java
-Copy
-Edit
-EasyPops.create(context)
-    .setMessage("This is a custom popup!")
-    .setTextColor(Color.WHITE)
-    .setBackgroundColor(Color.parseColor("#6200EE"))
-    .setDuration(EasyPops.LENGTH_LONG)
-    .show();
-Adding Animations
-java
-Copy
-Edit
-EasyPops.create(context)
-    .setMessage("Popup with animation!")
-    .setAnimationStyle(EasyPops.ANIMATION_FADE)
-    .show();
-🛠️ Configuration
-Customizing Global Defaults
-You can set default styles and configurations for all popups in your Application class:
+```
 
-java
-Copy
-Edit
-EasyPops.setDefaultBackgroundColor(Color.BLACK);
-EasyPops.setDefaultTextColor(Color.WHITE);
-EasyPops.setDefaultDuration(EasyPops.LENGTH_SHORT);
-📦 Dependencies
+## 📖 Usage
+
+### Progress
+
+```java
+EasyPopup.createProgress(this).buildAndShow();
+```
+
+#### Customizing
+
+```java
+EasyPopup.createProgress(this).setProgressColor(ContextCompat.getColor(this, R.color.primary)).setAutoCancel(10000).buildAndShow();
+```
+
+### Snack
+
+```java
+EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is error snack.").buildAndShow();
+```
+
+#### Customizing
+
+```java
+SnackStyle snackStyle = new SnackStyle();
+snackStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+snackStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+snackStyle.setButtonColor(ContextCompat.getColor(this, R.color.primary));
+snackStyle.setPosition(SnackStyle.Position.BOTTOM);
+```
+
+or use direct styling
+
+```java
+EasyPopup.createSnack(this).setBackgroundColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
+```
+
+### Date Picker
+
+```java
+DatePickerStyle datePickerStyle = new DatePickerStyle();
+datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+
+EasyPopup.createDatePicker(this).setTitle("Date picker").setMessage("Select your date").setDatePickerStyle(datePickerStyle).setOnDateSelectListener(new OnDateSelectListener() {
+     @Override
+     public void onDateSelected(int day, int month, int year) {
+          String date = day + "/" + month + "/" + year;
+     }
+
+     @Override
+     public void onDismiss() {
+     }
+}).buildAndShow();
+```
+
+#### Customizing
+
+```java
+DatePickerStyle datePickerStyle = new DatePickerStyle();
+datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+datePickerStyle.setTitleColor(ContextCompat.getColor(this, R.color.white));
+datePickerStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+datePickerStyle.setPositiveButtonColor(ContextCompat.getColor(this, R.color.primary));
+datePickerStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.white));
+```
+
+or use direct styling
+
+```java
+EasyPopup.createDatePicker(this).setBackgroundColor(ContextCompat.getColor(this, R.color.white)).buildAndShow();
+```
+
+### Dialog
+
+```java
+EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.DIALOG_NORMAL()).buildAndShow();
+```
+
+#### Customizing
+
+```java
+DialogStyle dialogStyle = new DialogStyle();
+dialogStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
+dialogStyle.setTitleColor(ContextCompat.getColor(this, R.color.white));
+dialogStyle.setMessageColor(ContextCompat.getColor(this, R.color.white));
+dialogStyle.setPositiveButtonColor(ContextCompat.getColor(this, R.color.primary));
+dialogStyle.setPositiveButtonTextColor(ContextCompat.getColor(this, R.color.white));
+dialogStyle.setNegativeButtonColor(ContextCompat.getColor(this, R.color.primary));
+dialogStyle.setNegativeButtonTextColor(ContextCompat.getColor(this, R.color.white));
+```
+
+or use direct styling
+
+```java
+EasyPopup.createDialog(this).setTitleColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
+```
+
+#### Customizing
+
+## 📦 Dependencies
 Material Components
 Ensures a modern look and feel that aligns with Android's material design principles.
-groovy
-Copy
-Edit
-implementation "com.google.android.material:material:1.9.0"
-📝 License
+
+```groovy
+implementation "com.google.android.material:material:1.12.0"
+```
+
+## 📝 License
 This library is licensed under the MIT License.
 Feel free to use it in your personal and commercial projects.
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions are welcome! If you have ideas, feature requests, or bug fixes, please create an issue or submit a pull request. Follow these steps to contribute:
 
 Fork the repository.
@@ -93,9 +145,10 @@ Create a new branch for your feature (git checkout -b feature-name).
 Commit your changes (git commit -m "Added feature X").
 Push to the branch (git push origin feature-name).
 Create a pull request.
-🧑‍💻 Author
+
+## 🧑‍💻 Author
 Developed with ❤️ by Doxart.
 Feel free to reach out for support or collaboration opportunities.
 
-🌟 Show Your Support
+## 🌟 Show Your Support
 If you like this library, don't forget to give it a ⭐ on GitHub! 😊
