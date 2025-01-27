@@ -2,6 +2,7 @@ package com.doxart.modulecustompopup;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +15,9 @@ import com.doxart.easypops.DatePickerStyle;
 import com.doxart.easypops.DialogStyle;
 import com.doxart.easypops.EasyPopup;
 import com.doxart.easypops.OnDateSelectListener;
+import com.doxart.easypops.OnDialogAnswerListener;
 import com.doxart.easypops.SnackStyle;
+import com.doxart.easypops.SnackbarButtonClickListener;
 import com.doxart.modulecustompopup.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -77,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
         EasyPopup.createProgress(this).buildAndShow();
     }
 
+    int snackTap = 0;
+
     private void getSnack() {
         SnackStyle snackStyle = new SnackStyle();
         snackStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
@@ -86,7 +91,46 @@ public class MainActivity extends AppCompatActivity {
 
         EasyPopup.createSnack(this).setBackgroundColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
 
-        EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is error snack.").buildAndShow();
+        if (snackTap == 0) {
+            EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_ERROR(this)).setMessage("This is ERROR snack.").setButtonClickListener(new SnackbarButtonClickListener() {
+                @Override
+                public void onClick() {
+                    b.showSnackBt.setText("Show Success Snack");
+                    snackTap = 1;
+                }
+
+                @Override
+                public void onTimesUp() {
+
+                }
+            }).buildAndShow();
+        } else if (snackTap == 1) {
+            EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_SUCCESS(this)).setMessage("This is SUCCESS snack.").setButtonClickListener(new SnackbarButtonClickListener() {
+                @Override
+                public void onClick() {
+                    b.showSnackBt.setText("Show Normal Snack");
+                    snackTap = 2;
+                }
+
+                @Override
+                public void onTimesUp() {
+
+                }
+            }).buildAndShow();
+        } else if (snackTap == 2) {
+            EasyPopup.createSnack(this).setSnackStyle(SnackStyle.SNACK_NORMAL(this)).setMessage("This is NORMAL snack.").setButtonClickListener(new SnackbarButtonClickListener() {
+                @Override
+                public void onClick() {
+                    b.showSnackBt.setText("Show Error Snack");
+                    snackTap = 0;
+                }
+
+                @Override
+                public void onTimesUp() {
+
+                }
+            }).buildAndShow();
+        }
     }
 
     private void getDialog() {
@@ -101,6 +145,21 @@ public class MainActivity extends AppCompatActivity {
 
         EasyPopup.createDialog(this).setTitleColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
 
-        EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.DIALOG_NORMAL()).buildAndShow();
+        EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.DIALOG_NORMAL()).setOnDialogAnswerListener(new OnDialogAnswerListener() {
+            @Override
+            public void onPositive() {
+                Toast.makeText(MainActivity.this, "You select yes.", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNegative() {
+                Toast.makeText(MainActivity.this, "You select no.", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLater() {
+                Toast.makeText(MainActivity.this, "You select later.", Toast.LENGTH_SHORT).show();
+            }
+        }).buildAndShow();
     }
 }

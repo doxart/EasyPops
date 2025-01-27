@@ -58,7 +58,7 @@
         app:cornerRadius="14dp"
         app:icon="@drawable/baseline_info_24"
         android:layout_margin="20dp"
-        android:text="Show Snack"
+        android:text="Show Error Snack"
         android:id="@+id/showSnackBt"
         app:backgroundTint="@color/black"/>
 
