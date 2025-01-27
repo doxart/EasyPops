@@ -56,6 +56,8 @@ EasyPopup.createSnack(this)
      .buildAndShow();
 ```
 
+![snack](https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/snack.gif)
+
 #### Customizing
 
 ```java
@@ -96,6 +98,8 @@ EasyPopup.createDatePicker(this)
 }).buildAndShow();
 ```
 
+![snack]()
+
 #### Customizing
 
 ```java
@@ -124,6 +128,8 @@ EasyPopup.createDialog(this)
      .setDialogStyle(DialogStyle.DIALOG_NORMAL())
      .buildAndShow();
 ```
+
+![snack]()
 
 #### Customizing
 
