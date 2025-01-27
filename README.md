@@ -36,6 +36,8 @@ EasyPopup.createProgress(this)
      .buildAndShow();
 ```
 
+![progress](https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/progress.gif)
+
 #### Customizing
 
 ```java
