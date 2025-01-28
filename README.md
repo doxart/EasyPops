@@ -1,5 +1,7 @@
 # EasyPops
 
+![Latest Release](https://img.shields.io/badge/latest-1.0.1-green)
+
 EasyPops is a lightweight and easy-to-use Android library for creating customizable and visually appealing popup messages in your application. Whether you need a simple toast, a fancy alert, or a fully customizable popup, EasyPops makes it effortless to integrate popups into your project.
 
 ---
@@ -23,7 +25,7 @@ Add the dependency to your module-level build.gradle:
 
 ```groovy
 dependencies {
-    implementation "com.github.doxart:easypops:1.0.0"
+    implementation "com.github.doxart:EasyPops:latest"
 }
 ```
 
