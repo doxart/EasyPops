@@ -98,7 +98,7 @@ EasyPopup.createDatePicker(this)
 }).buildAndShow();
 ```
 
-![snack]()
+![datepicker](https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/datepicker.gif)
 
 #### Customizing
 
@@ -129,7 +129,7 @@ EasyPopup.createDialog(this)
      .buildAndShow();
 ```
 
-![snack]()
+![dialog](https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/dialog.gif)
 
 #### Customizing
 
