@@ -1,6 +1,6 @@
 # EasyPops Easy Android Pop Up - Progress, Snack bar, Date picker, Dialog & more
 
-![Java](https://img.shields.io/badge/with-java-orange?style=for-the-badge&logo=openjdk&logoColor=orange&labelColor=white) ![Android](https://img.shields.io/badge/for-android-green?style=for-the-badge&logo=android&labelColor=white) [[Release](https://img.shields.io/badge/latest-1.0.1-green?style=for-the-badge)](https://jitpack.io/#doxart/EasyPops)
+![Java](https://img.shields.io/badge/with-java-orange?style=for-the-badge&logo=openjdk&logoColor=orange&labelColor=white) ![Android](https://img.shields.io/badge/for-android-green?style=for-the-badge&logo=android&labelColor=white) [![Release](https://img.shields.io/badge/latest-1.0.1-green?style=for-the-badge)](https://jitpack.io/#doxart/EasyPops)
 
 EasyPops is a lightweight and easy-to-use Android library for creating customizable and visually appealing popup messages in your application. Whether you need a simple toast, a fancy alert, or a fully customizable popup, EasyPops makes it effortless to integrate popups into your project.
 
