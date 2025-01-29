@@ -36,11 +36,25 @@ buildscript {
 }
 ```
 
+If still failing to resolve add this into your settings.gradle:
+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        maven(url = "https://jitpack.io")
+    }
+}
+```
+
 Add the dependency to your module-level build.gradle:
 
 ```groovy
 dependencies {
-    implementation "com.github.doxart:EasyPops:#latest"
+    implementation ("com.github.doxart:EasyPops:#latest")
 }
 ```
 
