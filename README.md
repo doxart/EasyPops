@@ -52,9 +52,11 @@ dependencyResolutionManagement {
 
 Add the dependency to your module-level build.gradle:
 
+[![Release](https://img.shields.io/badge/latest-1.0.1-green?style=for-the-badge)](https://jitpack.io/#doxart/EasyPops)
+
 ```groovy
 dependencies {
-    implementation ("com.github.doxart:EasyPops:#latest")
+    implementation ("com.github.doxart:EasyPops:latest")
 }
 ```
 
