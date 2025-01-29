@@ -1,4 +1,4 @@
-# EasyPops
+# EasyPops - Easy Android Pop Up | Progress, Snack bar, Date picker, Dialog & more
 
 ![Java](https://img.shields.io/badge/with-java-orange?style=for-the-badge&logo=openjdk&logoColor=orange&labelColor=white) ![Android](https://img.shields.io/badge/for-android-green?style=for-the-badge&logo=android&labelColor=white) ![Release](https://img.shields.io/badge/latest-1.0.1-green?style=for-the-badge) 
 
