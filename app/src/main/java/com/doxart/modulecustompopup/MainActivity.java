@@ -1,7 +1,6 @@
 package com.doxart.modulecustompopup;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -11,13 +10,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.doxart.easypops.DatePickerStyle;
-import com.doxart.easypops.DialogStyle;
-import com.doxart.easypops.EasyPopup;
-import com.doxart.easypops.OnDateSelectListener;
-import com.doxart.easypops.OnDialogAnswerListener;
-import com.doxart.easypops.SnackStyle;
-import com.doxart.easypops.SnackbarButtonClickListener;
 import com.doxart.modulecustompopup.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
