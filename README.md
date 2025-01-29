@@ -1,6 +1,6 @@
 # EasyPops
 
-![Java](https://img.shields.io/badge/java-orange?style=for-the-badge&logo=openjdk) ![Android](https://img.shields.io/badge/android-white?style=for-the-badge&logo=android) ![Release](https://img.shields.io/badge/latest-1.0.1-green?style=for-the-badge) 
+![Java](https://img.shields.io/badge/java-orange?style=for-the-badge&logo=openjdk) ![Android](https://img.shields.io/badge/for-android-green?style=for-the-badge&logo=android&labelColor=white) ![Release](https://img.shields.io/badge/latest-1.0.1-green?style=for-the-badge) 
 
 EasyPops is a lightweight and easy-to-use Android library for creating customizable and visually appealing popup messages in your application. Whether you need a simple toast, a fancy alert, or a fully customizable popup, EasyPops makes it effortless to integrate popups into your project.
 
