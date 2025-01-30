@@ -70,6 +70,8 @@ EasyPopup.createProgress(this)
 ```
 
 ![progress](https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/progress.gif)
+<img width="400" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/progress.gif">
+</img>
 
 #### Customizing
 
