@@ -69,7 +69,7 @@ EasyPopup.createProgress(this)
      .buildAndShow();
 ```
 
-<p align="center" style="color:blue">
+<p width="1000" align="center" style="color:blue">
     <img width="300" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/progress.gif">
 </img>
 </p>
