@@ -69,8 +69,10 @@ EasyPopup.createProgress(this)
      .buildAndShow();
 ```
 
-<img width="400" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/progress.gif">
+<p align="center">
+    <img width="300" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/progress.gif">
 </img>
+</p>
 
 #### Customizing
 
@@ -90,8 +92,10 @@ EasyPopup.createSnack(this)
      .buildAndShow();
 ```
 
-<img width="400" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/snack.gif">
+<p align="center">
+<img width="300" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/snack.gif">
 </img>
+</p>
 
 #### Customizing
 
@@ -133,8 +137,10 @@ EasyPopup.createDatePicker(this)
 }).buildAndShow();
 ```
 
-<img width="400" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/datepicker.gif">
+<p align="center">
+<img width="300" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/datepicker.gif">
 </img>
+</p>
 
 #### Customizing
 
@@ -165,8 +171,10 @@ EasyPopup.createDialog(this)
      .buildAndShow();
 ```
 
-<img width="400" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/dialog">
+<p align="center">
+<img width="300" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/dialog">
 </img>
+</p>
 
 #### Customizing
 
