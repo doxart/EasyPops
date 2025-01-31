@@ -51,7 +51,7 @@ publishing {
         create<MavenPublication>("EasyPop") {
             groupId = "com.github.doxart"
             artifactId = "EasyPops"
-            version = "1.0.2"
+            version = "1.0.4"
 
         }
     }
