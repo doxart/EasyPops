@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
-    id("maven-publish")
+    `maven-publish`
 }
 
 android {
@@ -32,16 +32,28 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+
+        singleVariant("debug") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
-configure<PublishingExtension> {
-    publications.create<MavenPublication>("EasyPops") {
-        groupId = "com.github.doxart"
-        artifactId = "EasyPops"
-        version = "1.0.1"
-    }
-    repositories {
-        mavenLocal()
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.doxart"
+            artifactId = "EasyPops"
+            version = "1.0.2"
+
+        }
     }
 }
 
