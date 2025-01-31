@@ -1,8 +1,15 @@
 # EasyPops Easy Android Pop Up - Progress, Snack bar, Date picker, Dialog & more
 
-![Java](https://img.shields.io/badge/with-java-orange?style=for-the-badge&logo=openjdk&logoColor=orange&labelColor=white) ![Android](https://img.shields.io/badge/for-android-green?style=for-the-badge&logo=android&labelColor=white) ![Release](https://img.shields.io/badge/latest-1.0.1-green?style=for-the-badge) 
+![Java](https://img.shields.io/badge/with-java-orange?style=for-the-badge&logo=openjdk&logoColor=orange&labelColor=white) ![Android](https://img.shields.io/badge/for-android-green?style=for-the-badge&logo=android&labelColor=white) [![Release](https://img.shields.io/badge/latest-1.0.1-green?style=for-the-badge)](https://jitpack.io/#doxart/EasyPops)
 
 EasyPops is a lightweight and easy-to-use Android library for creating customizable and visually appealing popup messages in your application. Whether you need a simple toast, a fancy alert, or a fully customizable popup, EasyPops makes it effortless to integrate popups into your project.
+
+<p align="center">
+    <img width="200" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/progress.gif">
+    <img width="200" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/snack.gif">
+    <img width="200" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/datepicker.gif">
+    <img width="200" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/dialog.gif">
+</p>
 
 ---
 
@@ -52,9 +59,11 @@ dependencyResolutionManagement {
 
 Add the dependency to your module-level build.gradle:
 
+[![Release](https://img.shields.io/badge/latest-1.0.1-green?style=for-the-badge)](https://jitpack.io/#doxart/EasyPops)
+
 ```groovy
 dependencies {
-    implementation ("com.github.doxart:EasyPops:#latest")
+    implementation ("com.github.doxart:EasyPops:latest")
 }
 ```
 
@@ -67,7 +76,9 @@ EasyPopup.createProgress(this)
      .buildAndShow();
 ```
 
-![progress](https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/progress.gif)
+<p align="center">
+    <img width="300" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/progress.gif">
+</p>
 
 #### Customizing
 
@@ -87,7 +98,9 @@ EasyPopup.createSnack(this)
      .buildAndShow();
 ```
 
-![snack](https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/snack.gif)
+<p align="center">
+    <img width="300" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/snack.gif">
+</p>
 
 #### Customizing
 
@@ -129,7 +142,9 @@ EasyPopup.createDatePicker(this)
 }).buildAndShow();
 ```
 
-![datepicker](https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/datepicker.gif)
+<p align="center">
+    <img width="300" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/datepicker.gif">
+</p>
 
 #### Customizing
 
@@ -160,7 +175,9 @@ EasyPopup.createDialog(this)
      .buildAndShow();
 ```
 
-![dialog](https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/dialog.gif)
+<p align="center">
+    <img width="300" align="center" src="https://github.com/doxart/EasyPops-Easy-Android-Pop-Up/blob/master/res/dialog.gif">
+</p>
 
 #### Customizing
 
