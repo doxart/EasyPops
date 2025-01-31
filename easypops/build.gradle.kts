@@ -48,7 +48,7 @@ android {
 
 publishing {
     publications {
-        create<MavenPublication>("EasyPop") {
+        create<MavenPublication>("maven") {
             groupId = "com.github.doxart"
             artifactId = "EasyPops"
             version = "1.0.4"
