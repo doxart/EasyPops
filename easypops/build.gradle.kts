@@ -38,21 +38,19 @@ android {
             withSourcesJar()
             withJavadocJar()
         }
-
-        singleVariant("debug") {
-            withSourcesJar()
-            withJavadocJar()
-        }
     }
 }
 
 publishing {
     publications {
-        create<MavenPublication>("maven") {
+        register<MavenPublication>("release") {
             groupId = "com.github.doxart"
             artifactId = "easypops"
-            version = "1.0.7"
+            version = "1.0.8"
 
+            afterEvaluate {
+                from(components["release"])
+            }
         }
     }
 }
