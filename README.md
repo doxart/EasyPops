@@ -122,6 +122,8 @@ EasyPopup.createSnack(this)
      .buildAndShow();
 ```
 
+##
+
 ### Date Picker
 
 ```java
@@ -167,6 +169,8 @@ EasyPopup.createDatePicker(this)
      .buildAndShow();
 ```
 
+##
+
 ### Dialog
 
 ```java
@@ -201,8 +205,6 @@ EasyPopup.createDialog(this)
      .setTitleColor(ContextCompat.getColor(this, R.color.primary))
      .buildAndShow();
 ```
-
-#### Customizing
 
 ## 📦 Dependencies
 Material Components
