@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.android.library)
-    `maven-publish`
+    id("com.android.library")
+    id("maven-publish")
 }
 
 android {
@@ -48,9 +48,9 @@ android {
 
 publishing {
     publications {
-        create<MavenPublication>("maven") {
+        create<MavenPublication>("release") {
             groupId = "com.github.doxart"
-            artifactId = "EasyPops"
+            artifactId = "easypops"
             version = "1.0.5"
 
         }
