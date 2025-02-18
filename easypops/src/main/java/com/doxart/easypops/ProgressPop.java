@@ -31,9 +31,9 @@ public class ProgressPop extends Dialog {
     }
 
     public static class Builder {
-        private Activity activity;
+        private final Activity activity;
         private ProgressPop progressPop;
-        private ProgressViewBinding b;
+        private final ProgressViewBinding b;
 
         long autoCancelMillis = 0;
 
@@ -56,10 +56,6 @@ public class ProgressPop extends Dialog {
                 progressPop.getWindow().setAttributes(layoutParams);
 
                 progressPop.getWindow().setBackgroundDrawableResource(R.drawable.alert_dialog_background);
-            }
-
-            if (!activity.isFinishing() && !activity.isDestroyed()) {
-                progressPop.cancel();
             }
 
             progressPop.setOnShowListener(dialog -> {
@@ -85,21 +81,25 @@ public class ProgressPop extends Dialog {
                 progressPop.getWindow().setBackgroundDrawableResource(R.drawable.alert_dialog_background);
             }
 
-            if (!activity.isFinishing() && !activity.isDestroyed()) {
-                progressPop.cancel();
-            }
-
             progressPop.setOnShowListener(dialog -> {
                 if (autoCancelMillis > 0) new Handler().postDelayed(() -> progressPop.cancel(), autoCancelMillis);
             });
 
             try {
-                progressPop.show();
+                if (!activity.isFinishing() && !activity.isDestroyed()) {
+                    progressPop.show();
+                }
             } catch (Exception e) {
                 Log.e("ProgressPop", "buildAndShow: " + e.getMessage());
             }
 
             return progressPop;
+        }
+
+        public Builder setText(String text) {
+            b.progressTxt.setVisibility(ViewGroup.VISIBLE);
+            b.progressTxt.setText(text);
+            return this;
         }
 
         public Builder setAutoCancel(long autoCancelMillis) {

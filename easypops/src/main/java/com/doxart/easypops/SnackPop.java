@@ -61,10 +61,6 @@ public class SnackPop extends Dialog {
                 snackPop.getWindow().setBackgroundDrawableResource(R.drawable.alert_dialog_transparent_background);
             }
 
-            if (!activity.isFinishing() && !activity.isDestroyed()) {
-                snackPop.cancel();
-            }
-
             b.getRoot().setOnClickListener(v -> {
                 snackPop.cancel();
             });
@@ -103,10 +99,6 @@ public class SnackPop extends Dialog {
                 snackPop.getWindow().setBackgroundDrawableResource(R.drawable.alert_dialog_transparent_background);
             }
 
-            if (!activity.isFinishing() && !activity.isDestroyed()) {
-                snackPop.cancel();
-            }
-
             b.getRoot().setOnClickListener(v -> {
                 snackPop.cancel();
             });
@@ -126,7 +118,9 @@ public class SnackPop extends Dialog {
             });
 
             try {
-                snackPop.show();
+                if (!activity.isFinishing() && !activity.isDestroyed()) {
+                    snackPop.show();
+                }
             } catch (Exception e) {
                 Log.e("SnackPop", "buildAndShow: " + e.getMessage());
             }

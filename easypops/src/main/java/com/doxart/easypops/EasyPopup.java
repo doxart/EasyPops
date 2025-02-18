@@ -54,4 +54,6 @@ public class EasyPopup {
     public static DialogPop.Builder createDialog(Activity activity) {
         return new DialogPop.Builder(activity);
     }
+
+    //Dialog End
 }

@@ -74,9 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getProgress() {
-        EasyPopup.createProgress(this).setProgressColor(ContextCompat.getColor(this, R.color.primary)).setAutoCancel(10000).buildAndShow();
-
-        EasyPopup.createProgress(this).buildAndShow();
+        EasyPopup.createProgress(this).setProgressColor(ContextCompat.getColor(this, R.color.primary)).setText("Please wait").setAutoCancel(10000).buildAndShow();
     }
 
     int snackTap = 0;

@@ -99,10 +99,6 @@ public class DialogPop extends Dialog {
                 dialogPop.getWindow().setBackgroundDrawableResource(R.drawable.alert_dialog_transparent_background);
             }
 
-            if (!activity.isFinishing() && !activity.isDestroyed()) {
-                dialogPop.cancel();
-            }
-
             b.askPositive.setOnClickListener(v -> {
                 dialogPop.cancel();
                 if (onDialogListener != null) {
@@ -125,7 +121,9 @@ public class DialogPop extends Dialog {
             });
 
             try {
-                dialogPop.show();
+                if (!activity.isFinishing() && !activity.isDestroyed()) {
+                    dialogPop.show();
+                }
             } catch (Exception e) {
                 Log.e("DialogPop", "buildAndShow: " + e.getMessage());
             }
