@@ -46,7 +46,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.doxart"
             artifactId = "easypops"
-            version = "1.1.3"
+            version = "1.1.4"
 
             afterEvaluate {
                 from(components["release"])

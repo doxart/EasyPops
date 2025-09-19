@@ -4,7 +4,7 @@
     </style>
     <style name="CustomDatePicker" parent="">
         <item name="android:textColorPrimary">@color/blat2</item>
-        <item name="colorControlNormal">@color/plat</item>
+        <item name="colorControlNormal">@color/plat2</item>
     </style>
     <style name="Theme.EasyPops" parent="Base.Theme.EasyPops" />
 </resources>
