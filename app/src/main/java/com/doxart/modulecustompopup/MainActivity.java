@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.doxart.easypops.DatePickerStyle;
+import com.doxart.easypops.DateResult;
 import com.doxart.easypops.DialogStyle;
 import com.doxart.easypops.EasyPopup;
 import com.doxart.easypops.OnDateSelectListener;
@@ -62,13 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
         EasyPopup.createDatePicker(this).setTitle("Date picker").setMessage("Select your date").setDatePickerStyle(datePickerStyle).setOnDateSelectListener(new OnDateSelectListener() {
             @Override
-            public void onDateSelected(int day, int month, int year, String formatted) {
-                b.datePickerBt.setText(day + "/" + month + "/" + year);
-            }
-
-            @Override
-            public void onDismiss() {
-
+            public void onDateSelected(DateResult result) {
+                b.datePickerBt.setText(result.getDay() + "/" + result.getMonth() + "/" + result.getYear());
             }
         }).buildAndShow();
     }

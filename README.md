@@ -19,7 +19,7 @@ EasyPops is a lightweight and easy-to-use Android library for creating customiza
 
 - Simple and intuitive API.
 - Fully customizable popups (colors, text, animations, etc.).
-- Supports multiple popup styles like progress, snackbars, date pickers and dialogs.
+- Supports multiple popup styles like progress, snackbars, dateResult pickers and dialogs.
 - Lightweight and optimized for performance.
 - Compatible with Android API level 24 and above.
 - Built-in support for material design principles.
@@ -134,12 +134,12 @@ datePickerStyle.setBackgroundColor(ContextCompat.getColor(this, R.color.black));
 
 EasyPopup.createDatePicker(this)
      .setTitle("Date picker")
-     .setMessage("Select your date")
+     .setMessage("Select your dateResult")
      .setDatePickerStyle(datePickerStyle)
      .setOnDateSelectListener(new OnDateSelectListener() {
      @Override
      public void onDateSelected(int day, int month, int year) {
-          String date = day + "/" + month + "/" + year;
+          String dateResult = day + "/" + month + "/" + year;
      }
 
      @Override

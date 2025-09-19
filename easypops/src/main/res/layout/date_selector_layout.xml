@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Select a date"
+                android:text="Select a dateResult"
                 android:id="@+id/title"
                 android:textStyle="bold"
                 android:textColor="@color/blat2"
@@ -35,7 +35,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select a date to get started"
+                android:text="Select a dateResult to get started"
                 android:id="@+id/message"
                 android:textSize="12dp"
                 android:textColor="@color/plat3"

@@ -67,7 +67,10 @@ public class DatePickerPop extends Dialog {
                         calendar.set(Calendar.MONTH, b.datePicker.getMonth());
                         calendar.set(Calendar.DAY_OF_MONTH, b.datePicker.getDayOfMonth());
                         Date date = calendar.getTime();
-                        onDateSelectListener.onDateSelected(b.datePicker.getDayOfMonth(), b.datePicker.getMonth()+1, b.datePicker.getYear(), new SimpleDateFormat("dd/MM/yyyy").format(date));
+
+                        DateResult result = new DateResult(b.datePicker.getDayOfMonth(), b.datePicker.getMonth()+1, b.datePicker.getYear(), new SimpleDateFormat("dd/MM/yyyy").format(date), date);
+
+                        onDateSelectListener.onDateSelected(result);
                     } catch (Exception e) {
                         Log.e("DatePickerPop", "build: " + e.getMessage());
                         onDateSelectListener.onError(e);
@@ -108,7 +111,10 @@ public class DatePickerPop extends Dialog {
                         calendar.set(Calendar.MONTH, b.datePicker.getMonth());
                         calendar.set(Calendar.DAY_OF_MONTH, b.datePicker.getDayOfMonth());
                         Date date = calendar.getTime();
-                        onDateSelectListener.onDateSelected(b.datePicker.getDayOfMonth(), b.datePicker.getMonth()+1, b.datePicker.getYear(), new SimpleDateFormat("dd/MM/yyyy").format(date));
+
+                        DateResult result = new DateResult(b.datePicker.getDayOfMonth(), b.datePicker.getMonth()+1, b.datePicker.getYear(), new SimpleDateFormat("dd/MM/yyyy").format(date), date);
+
+                        onDateSelectListener.onDateSelected(result);
                     } catch (Exception e) {
                         Log.e("DatePickerPop", "build: " + e.getMessage());
                         onDateSelectListener.onError(e);
