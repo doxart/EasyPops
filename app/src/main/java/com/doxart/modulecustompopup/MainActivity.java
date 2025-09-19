@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
         EasyPopup.createDialog(this).setTitleColor(ContextCompat.getColor(this, R.color.primary)).buildAndShow();
 
-        EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.DIALOG_NORMAL()).setOnDialogAnswerListener(new OnDialogAnswerListener() {
+        EasyPopup.createDialog(this).setTitle("Title").setMessage("This is message").setDialogStyle(DialogStyle.Default_Dialog()).setOnDialogAnswerListener(new OnDialogAnswerListener() {
             @Override
             public void onPositive() {
                 Toast.makeText(MainActivity.this, "You select yes.", Toast.LENGTH_SHORT).show();

@@ -3,18 +3,23 @@
     <color name="black">#0E0E10</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_alpha">#40FFFFFF</color>
-    <color name="plat">#F4F4F4</color>
+    <color name="red_alpha">#40F44336</color>
+    <color name="plat">#f9fafb</color>
     <color name="plat1.5">#EFEFEF</color>
-    <color name="plat2">#C5C5C5</color>
-    <color name="plat3">#858585</color>
+    <color name="plat2">#d1d5db</color>
+    <color name="plat2_t">#1AD1D5DB</color>
+    <color name="plat3">#6b7280</color>
     <color name="blat">#1B1B1F</color>
     <color name="blat1.5">#26262C</color>
     <color name="blat2">#36363E</color>
+    <color name="blat2_t">#1A36363E</color>
     <color name="blat3">#484852</color>
-    <color name="silver">#C3C3C3</color>
+    <color name="silver">#9ca3af</color>
 
-    <color name="primary">#080C2A</color>
-    <color name="secondary">#190D85</color>
+    <color name="primary">#08A6FB</color>
+    <color name="primary_t">#1A0860FB</color>
+    <color name="primary_2">#374151</color>
+    <color name="secondary">#938AFF</color>
     <color name="green">#4CAF50</color>
     <color name="green_hard">#0C8A10</color>
     <color name="green2">#1EA914</color>
@@ -30,4 +35,6 @@
     <color name="red_trans">#0DF44336</color>
     <color name="red_half_trans">#80F44336</color>
     <color name="yellow_half">#FFDF77</color>
+    <color name="yellow_t">#80FFC107</color>
+    <color name="yellow_t_2">#FFF5DD</color>
 </resources>

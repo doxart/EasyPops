@@ -14,7 +14,7 @@
         app:cardCornerRadius="14dp"
         android:id="@+id/askBG"
         app:cardElevation="0dp"
-        app:cardBackgroundColor="@color/blat">
+        app:cardBackgroundColor="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/blat2"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:id="@+id/askTitle"
@@ -40,7 +40,7 @@
                 android:textStyle="normal"
                 android:gravity="center"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/plat2"
+                android:textColor="@color/plat3"
                 android:id="@+id/askContain"
                 android:textSize="14dp"/>
 
@@ -51,13 +51,13 @@
                 android:layout_marginTop="20dp"
                 android:textAllCaps="false"
                 android:layout_marginHorizontal="10dp"
-                app:backgroundTint="@color/white"
+                app:backgroundTint="@color/primary"
                 android:theme="@style/Base.Theme.EasyPops"
                 app:cornerRadius="14dp"
                 android:textSize="14dp"
                 android:gravity="center"
                 android:text="Yes"
-                android:textColor="@color/primary"/>
+                android:textColor="@color/white"/>
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                 android:theme="@style/Base.Theme.EasyPops"
                 android:visibility="gone"
                 android:text="Later"
-                android:textColor="@color/plat3"/>
+                android:textColor="@color/plat2"/>
 
         </LinearLayout>
 

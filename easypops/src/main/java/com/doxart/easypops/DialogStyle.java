@@ -17,11 +17,11 @@ public class DialogStyle {
     private int negativeButtonColor = NOT_SET;
     private int negativeButtonTextColor = NOT_SET;
 
-    public static DialogStyle DIALOG_NORMAL() {
+    public static DialogStyle Default_Dialog() {
         return new DialogStyle();
     }
 
-    public static DialogStyle DIALOG_ERROR(Context context) {
+    public static DialogStyle Error_Dialog(Context context) {
         int primary = ContextCompat.getColor(context, R.color.red);
         int white = ContextCompat.getColor(context, R.color.white);
         int black = ContextCompat.getColor(context, R.color.black);
@@ -37,7 +37,7 @@ public class DialogStyle {
         return dialogStyle;
     }
 
-    public static DialogStyle DIALOG_SUCCESS(Context context) {
+    public static DialogStyle Success_Dialog(Context context) {
         int primary = ContextCompat.getColor(context, R.color.green);
         int white = ContextCompat.getColor(context, R.color.white);
         int black = ContextCompat.getColor(context, R.color.black);
