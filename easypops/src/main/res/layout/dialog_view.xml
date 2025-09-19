@@ -52,6 +52,7 @@
                 android:textAllCaps="false"
                 android:layout_marginHorizontal="10dp"
                 app:backgroundTint="@color/primary"
+                android:textStyle="bold"
                 android:theme="@style/Base.Theme.EasyPops"
                 app:cornerRadius="14dp"
                 android:textSize="14dp"
@@ -68,6 +69,7 @@
                 app:cornerRadius="9dp"
                 android:textSize="14dp"
                 android:theme="@style/Base.Theme.EasyPops"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:text="No"
                 android:textColor="@color/plat2"/>
@@ -80,6 +82,7 @@
                 android:textSize="14dp"
                 android:backgroundTint="@android:color/transparent"
                 app:cornerRadius="9dp"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:theme="@style/Base.Theme.EasyPops"
                 android:visibility="gone"

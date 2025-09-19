@@ -56,7 +56,7 @@ public class DatePickerPop extends Dialog {
                 layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 datePickerPop.getWindow().setAttributes(layoutParams);
 
-                datePickerPop.getWindow().setBackgroundDrawableResource(R.drawable.alert_dialog_background);
+                datePickerPop.getWindow().setBackgroundDrawableResource(R.drawable.alert_dialog_transparent_background);
             }
 
             b.applyBt.setOnClickListener(view -> {
@@ -100,7 +100,7 @@ public class DatePickerPop extends Dialog {
                 layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
                 datePickerPop.getWindow().setAttributes(layoutParams);
 
-                datePickerPop.getWindow().setBackgroundDrawableResource(R.drawable.alert_dialog_background);
+                datePickerPop.getWindow().setBackgroundDrawableResource(R.drawable.alert_dialog_transparent_background);
             }
 
             b.applyBt.setOnClickListener(view -> {

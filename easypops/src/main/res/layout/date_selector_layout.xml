@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Select a dateResult"
+                android:text="Select a date"
                 android:id="@+id/title"
                 android:textStyle="bold"
                 android:textColor="@color/blat2"
@@ -35,7 +35,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select a dateResult to get started"
+                android:text="Select a date to get started"
                 android:id="@+id/message"
                 android:textSize="12dp"
                 android:textColor="@color/plat3"
@@ -59,6 +59,7 @@
                 android:id="@+id/applyBt"
                 app:backgroundTint="@color/primary"
                 android:theme="@style/Base.Theme.EasyPops"
+                android:textStyle="bold"
                 android:text="Select"/>
 
             <com.google.android.material.button.MaterialButton
@@ -68,6 +69,7 @@
                 android:textColor="@color/plat2"
                 android:layout_marginTop="5dp"
                 android:id="@+id/laterBt"
+                android:textStyle="bold"
                 android:theme="@style/Base.Theme.EasyPops"
                 app:backgroundTint="@android:color/transparent"
                 android:text="Cancel"/>
