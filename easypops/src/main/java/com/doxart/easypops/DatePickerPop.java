@@ -12,6 +12,10 @@ import androidx.annotation.NonNull;
 
 import com.doxart.easypops.databinding.DateSelectorLayoutBinding;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class DatePickerPop extends Dialog {
     public DatePickerPop(@NonNull Context context) {
         super(context);
@@ -56,7 +60,19 @@ public class DatePickerPop extends Dialog {
             }
 
             b.applyBt.setOnClickListener(view -> {
-                if (onDateSelectListener != null) onDateSelectListener.onDateSelected(b.datePicker.getDayOfMonth(), b.datePicker.getMonth()+1, b.datePicker.getYear());
+                if (onDateSelectListener != null) {
+                    try {
+                        Calendar calendar = Calendar.getInstance();
+                        calendar.set(Calendar.YEAR, b.datePicker.getYear());
+                        calendar.set(Calendar.MONTH, b.datePicker.getMonth());
+                        calendar.set(Calendar.DAY_OF_MONTH, b.datePicker.getDayOfMonth());
+                        Date date = calendar.getTime();
+                        onDateSelectListener.onDateSelected(b.datePicker.getDayOfMonth(), b.datePicker.getMonth()+1, b.datePicker.getYear(), new SimpleDateFormat("dd/MM/yyyy").format(date));
+                    } catch (Exception e) {
+                        Log.e("DatePickerPop", "build: " + e.getMessage());
+                        onDateSelectListener.onError(e);
+                    }
+                }
                 if (datePickerPop != null) datePickerPop.cancel();
             });
 
@@ -85,7 +101,19 @@ public class DatePickerPop extends Dialog {
             }
 
             b.applyBt.setOnClickListener(view -> {
-                if (onDateSelectListener != null) onDateSelectListener.onDateSelected(b.datePicker.getDayOfMonth(), b.datePicker.getMonth()+1, b.datePicker.getYear());
+                if (onDateSelectListener != null) {
+                    try {
+                        Calendar calendar = Calendar.getInstance();
+                        calendar.set(Calendar.YEAR, b.datePicker.getYear());
+                        calendar.set(Calendar.MONTH, b.datePicker.getMonth());
+                        calendar.set(Calendar.DAY_OF_MONTH, b.datePicker.getDayOfMonth());
+                        Date date = calendar.getTime();
+                        onDateSelectListener.onDateSelected(b.datePicker.getDayOfMonth(), b.datePicker.getMonth()+1, b.datePicker.getYear(), new SimpleDateFormat("dd/MM/yyyy").format(date));
+                    } catch (Exception e) {
+                        Log.e("DatePickerPop", "build: " + e.getMessage());
+                        onDateSelectListener.onError(e);
+                    }
+                }
                 if (datePickerPop != null) datePickerPop.cancel();
             });
 

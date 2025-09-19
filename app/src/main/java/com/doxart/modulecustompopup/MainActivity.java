@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         EasyPopup.createDatePicker(this).setTitle("Date picker").setMessage("Select your date").setDatePickerStyle(datePickerStyle).setOnDateSelectListener(new OnDateSelectListener() {
             @Override
-            public void onDateSelected(int day, int month, int year) {
+            public void onDateSelected(int day, int month, int year, String formatted) {
                 b.datePickerBt.setText(day + "/" + month + "/" + year);
             }
 

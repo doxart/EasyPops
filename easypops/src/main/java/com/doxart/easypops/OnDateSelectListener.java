@@ -1,6 +1,7 @@
 package com.doxart.easypops;
 
 public interface OnDateSelectListener {
-    void onDateSelected(int day, int month, int year);
-    void onDismiss();
+    default void onDateSelected(int day, int month, int year, String formatted) {}
+    default void onDismiss() {}
+    default void onError(Exception e) {}
 }
