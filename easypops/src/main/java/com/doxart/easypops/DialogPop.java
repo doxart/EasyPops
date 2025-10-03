@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -33,7 +34,17 @@ public class DialogPop extends Dialog {
     }
 
     public void setProgress(int progress) {
-        ((LinearProgressIndicator) dialog.findViewById(R.id.askProgress)).setProgress(progress);
+        LinearProgressIndicator linearProgressIndicator = dialog.findViewById(R.id.askProgress);
+        TextView textView = dialog.findViewById(R.id.progressTxt);
+        linearProgressIndicator.setProgress(progress);
+        textView.setText(String.valueOf(progress));
+    }
+
+    public void setProgress(int progress, String value) {
+        LinearProgressIndicator linearProgressIndicator = dialog.findViewById(R.id.askProgress);
+        TextView textView = dialog.findViewById(R.id.progressTxt);
+        linearProgressIndicator.setProgress(progress);
+        textView.setText(value);
     }
 
     public static class Builder {
