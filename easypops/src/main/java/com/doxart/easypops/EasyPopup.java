@@ -14,7 +14,9 @@ public class EasyPopup {
     private static Dialog currentPop;
 
     protected static void setCurrentPop(Dialog currentPop) {
-        if (getCurrentPop() != null && getCurrentPop().isShowing()) getCurrentPop().cancel();
+        if (getCurrentPop() != null) {
+            if (getCurrentPop().isShowing()) cancelCurrentPop();
+        }
         show(currentPop);
     }
 

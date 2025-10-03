@@ -28,7 +28,7 @@ public class SnackPop extends Dialog {
 
     @Override
     public void cancel() {
-        EasyPopup.cancelCurrentPop();
+        super.cancel();
     }
 
     public static class Builder {

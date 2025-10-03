@@ -30,7 +30,7 @@ public class DialogPop extends Dialog {
 
     @Override
     public void cancel() {
-        EasyPopup.cancelCurrentPop();
+        super.cancel();
     }
 
     public void setProgress(int progress) {
