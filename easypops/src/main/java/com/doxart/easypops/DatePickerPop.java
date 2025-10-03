@@ -29,7 +29,7 @@ public class DatePickerPop extends Dialog {
 
     @Override
     public void cancel() {
-        super.cancel();
+        EasyPopup.cancelCurrentPop();
     }
 
     public static class Builder {
