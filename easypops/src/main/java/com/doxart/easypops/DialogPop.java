@@ -5,14 +5,17 @@ import android.app.Dialog;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 
 import com.doxart.easypops.databinding.DialogViewBinding;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 
 public class DialogPop extends Dialog {
+    private Dialog dialog;
     public DialogPop(@NonNull Context context) {
         super(context);
     }
@@ -20,6 +23,7 @@ public class DialogPop extends Dialog {
     @Override
     public void show() {
         super.show();
+        dialog = this;
         EasyPopup.setCurrentPop(this);
     }
 
@@ -28,10 +32,14 @@ public class DialogPop extends Dialog {
         super.cancel();
     }
 
+    public void setProgress(int progress) {
+        ((LinearProgressIndicator) dialog.findViewById(R.id.askProgress)).setProgress(progress);
+    }
+
     public static class Builder {
-        private Activity activity;
+        private final Activity activity;
         private DialogPop dialogPop;
-        private DialogViewBinding b;
+        private final DialogViewBinding b;
         private OnDialogAnswerListener onDialogListener;
 
         protected Builder(@NonNull Activity activity) {
@@ -139,6 +147,13 @@ public class DialogPop extends Dialog {
             if (dialogStyle.getPositiveButtonTextColor() != DialogStyle.NOT_SET) b.askPositive.setTextColor(dialogStyle.getPositiveButtonTextColor());
             if (dialogStyle.getNegativeButtonColor() != DialogStyle.NOT_SET) b.askNegative.setBackgroundColor(dialogStyle.getNegativeButtonColor());
             if (dialogStyle.getNegativeButtonTextColor() != DialogStyle.NOT_SET) b.askNegative.setTextColor(dialogStyle.getNegativeButtonTextColor());
+            if (dialogStyle.isDownloadProgressVisible()) {
+                b.askPositive.setVisibility(ViewGroup.GONE);
+                b.askProgress.setVisibility(ViewGroup.VISIBLE);
+                if (dialogStyle.getProgressColor() != DialogStyle.NOT_SET) b.askProgress.setIndicatorColor(dialogStyle.getProgressColor());
+                if (dialogStyle.getProgressTextColor() != DialogStyle.NOT_SET) b.askProgress.setIndicatorColor(dialogStyle.getProgressTextColor());
+                if (dialogStyle.getProgressBackgroundColor() != DialogStyle.NOT_SET) b.askProgress.setIndicatorColor(dialogStyle.getProgressBackgroundColor());
+            }
             return this;
         }
 
@@ -182,6 +197,11 @@ public class DialogPop extends Dialog {
             return this;
         }
 
+        public Builder setPositiveButtonClickListener(View.OnClickListener clickListener) {
+            b.askPositive.setOnClickListener(clickListener);
+            return this;
+        }
+
         public Builder setNegativeButtonText(String negativeButtonText) {
             b.askNegative.setText(negativeButtonText);
             return this;
@@ -194,6 +214,83 @@ public class DialogPop extends Dialog {
 
         public Builder setNegativeButtonTextColor(int negativeButtonTextColor) {
             b.askNegative.setTextColor(negativeButtonTextColor);
+            return this;
+        }
+
+        public Builder setNegativeButtonClickListener(View.OnClickListener clickListener) {
+            b.askNegative.setOnClickListener(clickListener);
+            return this;
+        }
+
+        public Builder setOtherButtonText(String otherButtonText) {
+            b.askOther.setText(otherButtonText);
+            return this;
+        }
+
+        public Builder setOtherButtonColor(int otherButtonColor) {
+            b.askOther.setBackgroundColor(otherButtonColor);
+            return this;
+        }
+
+        public Builder setOtherButtonTextColor(int otherButtonTextColor) {
+            b.askOther.setTextColor(otherButtonTextColor);
+            return this;
+        }
+
+        public Builder setOtherButtonClickListener(View.OnClickListener clickListener) {
+            b.askOther.setOnClickListener(clickListener);
+            return this;
+        }
+
+        public Builder setProgressColor(int progressColor) {
+            b.askProgress.setIndicatorColor(progressColor);
+            return this;
+        }
+
+        public Builder setProgressBackgroundColor(int progressBackgroundColor) {
+            b.askProgress.setTrackColor(progressBackgroundColor);
+            return this;
+        }
+
+        public Builder setProgressActive(boolean active) {
+            if (active) {
+                b.askPositive.setVisibility(ViewGroup.GONE);
+                b.progressView.setVisibility(ViewGroup.VISIBLE);
+                b.askOther.setVisibility(ViewGroup.GONE);
+            } else {
+                b.askPositive.setVisibility(ViewGroup.VISIBLE);
+                b.progressView.setVisibility(ViewGroup.GONE);
+            }
+            return this;
+        }
+
+        public Builder setProgress(int progress) {
+            b.askProgress.setProgress(progress);
+            return this;
+        }
+
+        public Builder setProgressMax(int max) {
+            b.askProgress.setMax(max);
+            return this;
+        }
+
+        public Builder setProgressTargetTextColor(int color) {
+            b.progressMaxTxt.setTextColor(color);
+            return this;
+        }
+
+        public Builder setProgressTarget(String target) {
+            b.progressMaxTxt.setText(target);
+            return this;
+        }
+
+        public Builder setProgressTextColor(int color) {
+            b.progressTxt.setTextColor(color);
+            return this;
+        }
+
+        public Builder setProgressText(String txt) {
+            b.progressTxt.setText(txt);
             return this;
         }
 

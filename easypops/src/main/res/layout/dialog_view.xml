@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:clipToPadding="false"
+    android:background="@color/plat2"
     android:padding="50dp"
     android:gravity="center">
 
@@ -60,6 +61,52 @@
                 android:text="Yes"
                 android:textColor="@color/white"/>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/progressView"
+                android:layout_marginVertical="20dp">
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    app:trackColor="@color/plat2"
+                    android:indeterminateTint="@android:color/transparent"
+                    android:indeterminateOnly="false"
+                    app:indicatorColor="@color/primary"
+                    android:progress="25"
+                    android:id="@+id/askProgress"
+                    app:trackStopIndicatorSize="0dp"
+                    app:trackThickness="16dp"
+                    android:visibility="visible"
+                    app:trackCornerRadius="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_centerVertical="true"
+                    android:textSize="10dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/progressTxt"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:layout_centerVertical="true"
+                    android:textSize="10dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/progressMaxTxt"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +118,7 @@
                 android:theme="@style/Base.Theme.EasyPops"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:text="No"
+                android:text="Cancel"
                 android:textColor="@color/plat2"/>
 
             <Button

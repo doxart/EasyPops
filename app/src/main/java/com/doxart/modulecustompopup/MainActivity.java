@@ -1,6 +1,7 @@
 package com.doxart.modulecustompopup;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.doxart.easypops.DatePickerStyle;
 import com.doxart.easypops.DateResult;
+import com.doxart.easypops.DialogPop;
 import com.doxart.easypops.DialogStyle;
 import com.doxart.easypops.EasyPopup;
 import com.doxart.easypops.OnDateSelectListener;
@@ -49,6 +51,25 @@ public class MainActivity extends AppCompatActivity {
         b.showProgressBt.setOnClickListener(v -> getProgress());
         b.showSnackBt.setOnClickListener(v -> getSnack());
         b.showDialogBt.setOnClickListener(v -> getDialog());
+
+        DialogPop d = EasyPopup.createDialog(this)
+                .setProgressBackgroundColor(ContextCompat.getColor(this, com.doxart.easypops.R.color.plat2))
+                .setProgressColor(ContextCompat.getColor(this, com.doxart.easypops.R.color.secondary))
+                .setProgressTarget("250 mb")
+                .setProgressText("0 mb")
+                .setProgressActive(true).buildAndShow();
+
+        new CountDownTimer(100000, 1000) {
+            @Override
+            public void onFinish() {
+
+            }
+
+            @Override
+            public void onTick(long l) {
+                d.setProgress(100 - ((int) l / 1000));
+            }
+        }.start();
     }
 
     private void getDatePicker() {

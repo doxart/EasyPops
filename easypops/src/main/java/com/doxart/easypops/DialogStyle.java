@@ -16,6 +16,10 @@ public class DialogStyle {
     private int positiveButtonTextColor = NOT_SET;
     private int negativeButtonColor = NOT_SET;
     private int negativeButtonTextColor = NOT_SET;
+    private boolean downloadProgressVisible = false;
+    private int progressColor = NOT_SET;
+    private int progressTextColor = NOT_SET;
+    private int progressBackgroundColor = NOT_SET;
 
     public static DialogStyle Default_Dialog() {
         return new DialogStyle();
@@ -49,6 +53,17 @@ public class DialogStyle {
         dialogStyle.setPositiveButtonColor(white);
         dialogStyle.setPositiveButtonTextColor(black);
         dialogStyle.setNegativeButtonTextColor(white);
+
+        return dialogStyle;
+    }
+
+    public static DialogStyle Download_Dialog(Context context) {
+        int primary = ContextCompat.getColor(context, R.color.green);
+        int white = ContextCompat.getColor(context, R.color.white);
+        int black = ContextCompat.getColor(context, R.color.black);
+        DialogStyle dialogStyle = new DialogStyle();
+
+        dialogStyle.setDownloadProgressVisible(true);
 
         return dialogStyle;
     }
@@ -119,6 +134,42 @@ public class DialogStyle {
 
     public void setNegativeButtonTextColor(int negativeButtonTextColor) {
         this.negativeButtonTextColor = negativeButtonTextColor;
+    }
+
+    public boolean isDownloadProgressVisible() {
+        return downloadProgressVisible;
+    }
+
+    public void setDownloadProgressVisible(boolean downloadProgressVisible) {
+        this.downloadProgressVisible = downloadProgressVisible;
+    }
+
+    public void setProgressMode() {
+        this.downloadProgressVisible = true;
+    }
+
+    public int getProgressColor() {
+        return progressColor;
+    }
+
+    public void setProgressColor(int progressColor) {
+        this.progressColor = progressColor;
+    }
+
+    public int getProgressTextColor() {
+        return progressTextColor;
+    }
+
+    public void setProgressTextColor(int progressTextColor) {
+        this.progressTextColor = progressTextColor;
+    }
+
+    public int getProgressBackgroundColor() {
+        return progressBackgroundColor;
+    }
+
+    public void setProgressBackgroundColor(int progressBackgroundColor) {
+        this.progressBackgroundColor = progressBackgroundColor;
     }
 
     public static void setDialogStyle(Context context, DialogViewBinding b, int style) {

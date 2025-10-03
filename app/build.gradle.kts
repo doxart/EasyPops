@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    //implementation("com.github.doxart:EasyPops:1.1.0") // from jitpack
+    //implementation("com.github.doxart:EasyPops:1.1.5") // from jitpack
 
     implementation(project(":easypops")) // from local module
 
