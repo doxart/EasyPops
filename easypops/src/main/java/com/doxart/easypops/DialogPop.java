@@ -47,6 +47,10 @@ public class DialogPop extends Dialog {
         textView.setText(value);
     }
 
+    public LinearProgressIndicator getProgressView() {
+        return dialog.findViewById(R.id.askProgress);
+    }
+
     public static class Builder {
         private final Activity activity;
         private DialogPop dialogPop;

@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:clipToPadding="false"
-    android:background="@color/plat2"
     android:padding="50dp"
     android:gravity="center">
 
@@ -77,6 +76,7 @@
                     app:indicatorColor="@color/primary"
                     android:progress="25"
                     android:id="@+id/askProgress"
+                    app:indicatorTrackGapSize="0dp"
                     app:trackStopIndicatorSize="0dp"
                     app:trackThickness="16dp"
                     android:visibility="visible"
