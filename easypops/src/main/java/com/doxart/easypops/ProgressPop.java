@@ -44,7 +44,7 @@ public class ProgressPop extends Dialog {
 
         public ProgressPop build() {
             progressPop = new ProgressPop(activity);
-            progressPop.setContentView(R.layout.progress_view);
+            progressPop.setContentView(b.getRoot());
             if (progressPop.getWindow() != null) progressPop.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             progressPop.setCancelable(false);
 
@@ -67,7 +67,7 @@ public class ProgressPop extends Dialog {
 
         public ProgressPop buildAndShow() {
             progressPop = new ProgressPop(activity);
-            progressPop.setContentView(R.layout.progress_view);
+            progressPop.setContentView(b.getRoot());
             if (progressPop.getWindow() != null) progressPop.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             progressPop.setCancelable(false);
 
