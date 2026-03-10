@@ -107,6 +107,11 @@ public class ProgressPop extends Dialog {
             return this;
         }
 
+        public Builder setTextColor(int color) {
+            b.progressTxt.setTextColor(color);
+            return this;
+        }
+
         public Builder setBackgroundColor(int backgroundColor) {
             b.progressBG.setCardBackgroundColor(backgroundColor);
             return this;
